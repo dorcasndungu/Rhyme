@@ -12,10 +12,10 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class TracksClient {
+public class LyricsClient {
     private static Retrofit retrofit = null;
 
-    public static TracksAPI getClient() {
+    public static LyricsAPI getClient() {
 
         if (retrofit == null) {
             OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -37,6 +37,6 @@ public class TracksClient {
                     .build();
         }
 
-        return retrofit.create(TracksAPI.class);
+        return retrofit.create(LyricsAPI.class);
     }
 }
