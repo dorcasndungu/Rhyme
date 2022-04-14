@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Rhyme">
         <activity
+            android:name=".ui.LyricRhyme"
+            android:exported="false" />
+        <activity
             android:name=".ui.AuthenticationActivity"
             android:exported="false" />
         <activity

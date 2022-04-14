@@ -17,6 +17,10 @@ import com.example.rhyme.Models.TracksApiPojos;
 import com.example.rhyme.R;
 import com.example.rhyme.adapter.TrackListAdapter;
 import com.example.rhyme.databinding.ActivityHomeBinding;
+import com.example.rhyme.lyricsModels.Lyrics;
+import com.example.rhyme.lyricsModels.LyricsApiPojos;
+import com.example.rhyme.network.LyricsAPI;
+import com.example.rhyme.network.LyricsClient;
 import com.example.rhyme.network.TracksAPI;
 import com.example.rhyme.network.TracksClient;
 
@@ -31,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private List<Track> apiTrackList;
+    String apiLyrics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,36 +48,38 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-        TracksAPI client = TracksClient.getClient();
-        Call<TracksApiPojos> call = client.getTracks(mm_API_KEY, "hot",1,80,"xw",1);
+
+
+    TracksAPI client = TracksClient.getClient();
+    Call<TracksApiPojos> call = client.getTracks(mm_API_KEY, "hot",1,80,"xw",1);
 
         call.enqueue(new Callback<TracksApiPojos>() {
-            @Override
-            public void onResponse(Call<TracksApiPojos> call, Response<TracksApiPojos> response) {
+        @Override
+        public void onResponse(Call<TracksApiPojos> call, Response<TracksApiPojos> response) {
 
-                hideProgressBar();
+            hideProgressBar();
 
-                if (response.isSuccessful()) {
-                    apiTrackList=response.body().getMessage().getBody().getTrackList();
+            if (response.isSuccessful()) {
+                apiTrackList=response.body().getMessage().getBody().getTrackList();
 
-                    adapter=new TrackListAdapter(apiTrackList,HomeActivity.this);
-                    recyclerView.setAdapter(adapter);
+                adapter=new TrackListAdapter(apiTrackList,HomeActivity.this);
+                recyclerView.setAdapter(adapter);
 
-                    showTracks();
-                } else {
-                    showUnsuccessfulMessage();
-                }
+                showTracks();
+            } else {
+                showUnsuccessfulMessage();
             }
+        }
 
-            @Override
-            public void onFailure(Call<TracksApiPojos> call, Throwable t) {
-                Log.e(TAG, "onFailure: ",t );
-                hideProgressBar();
-                showFailureMessage();
-            }
+        @Override
+        public void onFailure(Call<TracksApiPojos> call, Throwable t) {
+            Log.e(TAG, "onFailure: ",t );
+            hideProgressBar();
+            showFailureMessage();
+        }
 
-        });
-    }
+    });
+}
     private void showFailureMessage() {
         binding.errorTextView.setText("Something went wrong. Please check your Internet connection and try again later");
         binding.errorTextView.setVisibility(View.VISIBLE);

@@ -1,7 +1,6 @@
 
 package com.example.rhyme.lyricsModels;
 
-import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -9,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Body {
 
-    @SerializedName("track_list")
+    @SerializedName("lyrics")
     @Expose
-    private List<Track> trackList = null;
+    private Lyrics lyrics;
 
     /**
      * No args constructor for use in serialization
@@ -22,19 +21,19 @@ public class Body {
 
     /**
      * 
-     * @param trackList
+     * @param lyrics
      */
-    public Body(List<Track> trackList) {
+    public Body(Lyrics lyrics) {
         super();
-        this.trackList = trackList;
+        this.lyrics = lyrics;
     }
 
-    public List<Track> getTrackList() {
-        return trackList;
+    public Lyrics getLyrics() {
+        return lyrics;
     }
 
-    public void setTrackList(List<Track> trackList) {
-        this.trackList = trackList;
+    public void setLyrics(Lyrics lyrics) {
+        this.lyrics = lyrics;
     }
 
 }

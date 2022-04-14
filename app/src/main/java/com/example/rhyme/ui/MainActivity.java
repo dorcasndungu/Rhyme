@@ -22,7 +22,7 @@ ActivityMainBinding binding;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this,AuthenticationActivity.class);
+                Intent intent = new Intent(MainActivity.this,HomeActivity.class);
                 startActivity(intent);
             }
         }, SPLASH_DISPLAY_LENGTH);

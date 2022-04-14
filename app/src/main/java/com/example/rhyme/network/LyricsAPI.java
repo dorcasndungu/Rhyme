@@ -1,6 +1,5 @@
 package com.example.rhyme.network;
 
-import com.example.rhyme.Models.TracksApiPojos;
 import com.example.rhyme.lyricsModels.LyricsApiPojos;
 
 import retrofit2.Call;

@@ -1,6 +1,7 @@
 package com.example.rhyme.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.rhyme.Models.Track;
 import com.example.rhyme.R;
+import com.example.rhyme.ui.LyricRhyme;
 import com.example.rhyme.ui.LyricRhymeFragment;
 import com.example.rhyme.ui.MainActivity;
 
@@ -36,6 +38,7 @@ public class TrackListAdapter extends RecyclerView.Adapter<TrackListAdapter.trac
     public TrackListAdapter.trackViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.listitem,parent,false);
         return new trackViewHolder(view);
+
     }
 
     @Override
@@ -44,7 +47,18 @@ public class TrackListAdapter extends RecyclerView.Adapter<TrackListAdapter.trac
         holder.artistName.setText(track.getTrack().getArtistName());
         holder.trackName.setText(track.getTrack().getTrackName());
         holder.albumName.setText(track.getTrack().getAlbumName());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(context, LyricRhyme.class);
+        intent.putExtra("artistName",track.getTrack().getArtistName());
+        intent.putExtra("trackName",track.getTrack().getTrackName());
+        intent.putExtra("albumName",track.getTrack().getAlbumName());
+        context.startActivity(intent);
+    Toast.makeText(context,track.getTrack().getTrackName(),Toast.LENGTH_SHORT).show();
 
+    }
+});
     }
 
     @Override
@@ -52,9 +66,10 @@ public class TrackListAdapter extends RecyclerView.Adapter<TrackListAdapter.trac
         return trackList.size();
     }
     public static class trackViewHolder extends RecyclerView.ViewHolder {
-        private TextView artistName;
-        private TextView trackName;
-        private TextView albumName;
+
+        public TextView artistName;
+        public TextView trackName;
+        public TextView albumName;
         public trackViewHolder(@NonNull View itemView) {
             super(itemView);
             artistName=itemView.findViewById(R.id.itemArtist);

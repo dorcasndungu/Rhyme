@@ -7,9 +7,10 @@
         <entry key="app/src/main/res/font/hanalei.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_authentication.xml" value="0.171875" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.15625" />
+        <entry key="app/src/main/res/layout/activity_lyric_rhyme.xml" value="0.171875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_lyric_rhyme.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_lyric_rhyme.xml" value="0.125" />
         <entry key="app/src/main/res/layout/listitem.xml" value="0.25" />
       </map>
     </option>
