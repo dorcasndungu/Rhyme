@@ -13,7 +13,7 @@ public class Body {
 
     @SerializedName("track_list")
     @Expose
-    private List<Track> trackList = null;
+    private List<Track> trackList;
 
     /**
      * No args constructor for use in serialization
