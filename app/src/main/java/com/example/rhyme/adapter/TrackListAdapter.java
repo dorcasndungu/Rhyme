@@ -9,18 +9,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.rhyme.Models.Track;
 import com.example.rhyme.R;
 import com.example.rhyme.ui.LyricRhyme;
-import com.example.rhyme.ui.LyricRhymeFragment;
-import com.example.rhyme.ui.MainActivity;
+
 
 import java.util.List;
-
-import retrofit2.Callback;
 
 public class TrackListAdapter extends RecyclerView.Adapter<TrackListAdapter.trackViewHolder>{
     private List<Track> trackList;
