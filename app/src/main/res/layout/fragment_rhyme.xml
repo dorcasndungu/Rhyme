@@ -8,40 +8,51 @@
     android:background="@drawable/authimage"
     tools:context=".ui.RhymeFragment">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="160dp"
-        android:layout_height="19dp"
-        android:text="Title"
-        app:layout_constraintBottom_toTopOf="@+id/rhyme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.231"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312" />
 
-    <EditText
-        android:id="@+id/rhyme"
-        android:layout_width="match_parent"
-        android:layout_height="700dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="32dp"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/fragmentSave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/title"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
     <Button
-        android:id="@+id/fragmentSave"
+        android:id="@+id/rhymeUpdate"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/pinkPurple"
         android:gravity="center_horizontal"
-        android:layout_height="20dp"
-        android:layout_marginEnd="72dp"
         android:text="Save"
-        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rhyme"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/phtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/phrhyme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <EditText
+        android:id="@+id/phrhyme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="64dp"
+        android:gravity="start"
+        android:minHeight="48dp"
+        android:text="Rhyme"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phtitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
