@@ -100,6 +100,7 @@ public class Track__1 {
      * @param hasSubtitles
      * @param commontrackId
      */
+    private String pushId;
     public Track__1(Integer trackId, String trackName, List<Object> trackNameTranslationList, Integer trackRating, Integer commontrackId, Integer instrumental, Integer explicit, Integer hasLyrics, Integer hasSubtitles, Integer hasRichsync, Integer numFavourite, Integer albumId, String albumName, Integer artistId, String artistName, String trackShareUrl, String trackEditUrl, Integer restricted, String updatedTime, PrimaryGenres primaryGenres) {
         super();
         this.trackId = trackId;
@@ -283,5 +284,11 @@ public class Track__1 {
     public void setPrimaryGenres(PrimaryGenres primaryGenres) {
         this.primaryGenres = primaryGenres;
     }
+    public String getPushId() {
+        return pushId;
+    }
 
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
+    }
 }
