@@ -13,119 +13,83 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="#8F51B3B3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="5dp"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.444">
+
 
         <Button
             android:id="@+id/Share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             android:text="Share"
             android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/button4"
-            android:visibility="gone"/>
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Edit"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toEndOf="@+id/Share"
-            android:visibility="gone"/>
-
-        <TextView
-            android:id="@+id/artistname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="artist name"
-            android:textColor="@color/purple_200"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/trackname"
-            app:layout_constraintTop_toBottomOf="@+id/trackname"
-            android:visibility="gone"/>
+            app:layout_constraintEnd_toStartOf="@+id/Save"
+            app:layout_constraintHorizontal_bias="0.803"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RhymePH"
+            app:layout_constraintVertical_bias="0.666" />
 
         <TextView
             android:id="@+id/trackname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+
+            android:layout_marginTop="16dp"
             android:text="Track name"
-            android:textColor="@color/purple_200"
+            android:textColor="@color/lightPurple"
             android:textSize="34sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/artistname"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintHorizontal_bias="0.212"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/Save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="44dp"
             android:text="Save"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/button4"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toBottomOf="@+id/RhymePH"
+            app:layout_constraintVertical_bias="0.578" />
 
         <TextView
             android:id="@+id/lyricsPlaceHolder"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="19dp"
             android:scrollbars="vertical"
             android:text="Lyrics"
-            android:textColor="@color/lightPurple"
+            android:textColor="@color/white"
             android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/RhymePH"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/artistname"
-            android:visibility="gone"/>
-
-        <EditText
-            android:id="@+id/RhymePH"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:scrollbars = "vertical"
-            android:hint="Add rhyme here..."
-            android:textColorHint="@color/lightPurple"
-            android:textSize="24sp"
-            android:verticalScrollbarPosition="right"
-            app:layout_constraintBottom_toTopOf="@+id/button4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lyricsPlaceHolder"
-            app:layout_constraintVertical_bias="0.0"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toBottomOf="@+id/artistname" />
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyle"
-            android:layout_width="70dp"
-            android:layout_height="6dp"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
             android:layout_centerInParent="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="1dp"
+            android:layout_marginStart="296dp"
             android:layout_marginBottom="683dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
@@ -136,13 +100,55 @@
             android:layout_height="15dp"
             android:layout_centerInParent="true"
             android:layout_margin="16dp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/lyricsPlaceHolder"
             app:layout_constraintEnd_toEndOf="@+id/lyricsPlaceHolder"
             app:layout_constraintHorizontal_bias="0.136"
             app:layout_constraintStart_toStartOf="@+id/lyricsPlaceHolder"
             app:layout_constraintTop_toTopOf="@+id/lyricsPlaceHolder"
-            app:layout_constraintVertical_bias="0.287"
-            android:visibility="gone"/>
+            app:layout_constraintVertical_bias="0.287" />
+
+        <EditText
+            android:id="@+id/RhymePH"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:gravity="start"
+            android:hint="Add rhyme here..."
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textColorHint="@color/lightPurple"
+            android:textSize="24sp"
+            android:verticalScrollbarPosition="right"
+            app:layout_constraintBottom_toTopOf="@+id/Save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyricsPlaceHolder" />
+
+        <Button
+            android:id="@+id/savedlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rhymes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Share"
+            app:layout_constraintHorizontal_bias="0.426"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Save"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/artistname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Artistname"
+            android:textColor="@color/darkPurple"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/lyricsPlaceHolder"
+            app:layout_constraintStart_toStartOf="@+id/trackname"
+            app:layout_constraintTop_toBottomOf="@+id/trackname" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
