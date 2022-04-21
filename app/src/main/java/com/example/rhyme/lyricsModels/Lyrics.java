@@ -47,6 +47,7 @@ public class Lyrics {
      * @param lyricsCopyright
      * @param lyricsBody
      */
+    private String pushId;
     public Lyrics(Integer lyricsId, Integer explicit, String lyricsBody, String scriptTrackingUrl, String pixelTrackingUrl, String lyricsCopyright, String updatedTime) {
         super();
         this.lyricsId = lyricsId;
@@ -113,5 +114,11 @@ public class Lyrics {
     public void setUpdatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
     }
+    public String getPushId() {
+        return pushId;
+    }
 
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
+    }
 }
