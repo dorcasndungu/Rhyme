@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "40608751887",
+    "project_id": "rhyme-f6508",
+    "storage_bucket": "rhyme-f6508.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40608751887:android:29a298f5aee120900a5e7a",
+        "android_client_info": {
+          "package_name": "com.example.rhyme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40608751887-n4kgeg1pmkg7sr36igb8oe7a6fikscta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvnqVzqx8TMcQvVoPjMFj2eQkoO2nm66M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40608751887-n4kgeg1pmkg7sr36igb8oe7a6fikscta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

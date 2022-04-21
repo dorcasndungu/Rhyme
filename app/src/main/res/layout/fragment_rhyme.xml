@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/authimage"
+    tools:context=".ui.RhymeFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="160dp"
+        android:layout_height="19dp"
+        android:text="Title"
+        app:layout_constraintBottom_toTopOf="@+id/rhyme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <EditText
+        android:id="@+id/rhyme"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="32dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+    <Button
+        android:id="@+id/fragmentSave"
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_height="20dp"
+        android:layout_marginEnd="72dp"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rhyme"
+        app:layout_constraintVertical_bias="0.578" />
+</androidx.constraintlayout.widget.ConstraintLayout>
