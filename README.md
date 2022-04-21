@@ -1,11 +1,11 @@
 # Rhyme
 
-This is an android app that helps songwriters experiencing writer's block by providing them with a variety of song lyrics and a notepad in which they are supposed to create different phrases for the provided lyrics and save them. 
+This is an android app that helps songwriters experiencing writer's block by providing them with a variety of song lyrics and a notepad in which they are supposed to create different phrases for the provided lyrics and save them to help revive their creativity. 
 
 ## Install
 Download the app using this link:
 
-https://ufile.io/aoexr1lm
+https://ufile.io/vj3xzys1
 
 ## Getting Started
 
