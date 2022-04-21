@@ -14,7 +14,7 @@ public interface TracksAPI {
             @Query("page") int page,
             @Query("page_size") int page_size,
             @Query("country") String country,
-            @Query("_f_has_lyrics") int f_has_lyrics
+            @Query("f_has_lyrics") int f_has_lyrics
 
     );
 
