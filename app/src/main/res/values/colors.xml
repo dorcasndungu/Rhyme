@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightPurple">#E1BEE7</color>
     <color name="pinkPurple">#FF4081</color>
-
+    <color name="darkPurple">#673AB7 </color>
 </resources>
